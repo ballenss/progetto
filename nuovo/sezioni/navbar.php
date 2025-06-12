@@ -32,7 +32,8 @@
  
         
       </ul> 
-      <span class="navbar-text px-4">Ciao <?php echo $_SESSION["nome"] ?></span>
+      <span class="navbar-text px-4">
+        <a href="profilo.php">Ciao <?php echo $_SESSION["nome"] ?></span></a>
       <span class="navbar-text">
         <a href="logout.php">Logout</a>
       </span>

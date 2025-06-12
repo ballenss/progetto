@@ -33,7 +33,7 @@
 
             
             // query con cognome e password da utenti
-            $query = "SELECT cognome, nome, password from utenti where username='$login'";
+            $query = "SELECT cognome, nome, password, mail from utenti where username='$login'";
             // eseguiamo la query
             $risultato = mysqli_query($connessione, $query);
             // conto quanti risultati ha la query
@@ -50,6 +50,7 @@
                     $_SESSION["username"]=$login;
                     $_SESSION["cognome"] = $riga["cognome"];
                     $_SESSION["nome"] = $riga["nome"];
+                    $_SESSION["mail"] = $riga["mail"];
                     
 
                     header("Location:index.php") ; 

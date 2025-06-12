@@ -15,41 +15,63 @@
 
        <article id="article_home">
           <h1>Profilo <?php echo $_SESSION["nome"] ?></h1>
-         
-          <h3 id="identificatore_hover">Risparmia su una selezione di articoli</h3>
+          <div class="card shadow-lg rounded-4">
+    <div class="card-body">
+      <h4 class="card-title mb-4">Profilo Utente</h4>
 
-          <section>
-              <h2 class="titoli_home"> Novità uomo </h2>
-              <img src="immagini/felpa-uomo.jpg" alt="felpa uomo" title="felpa uomo" 
-                     class="immagine-shop">
-              <img src="immagini/maglietta-uomo.jpg" alt="maglietta uomo" title="maglietta uomo" 
-                     class="immagine-shop">
-              <img src="immagini/jeans-uomo.jpg" alt="jeans uomo" title="jeans uomo" 
-                      class="immagine-shop">
-			</section>
-			
-          <section>
-              <h2 class="titoli_home"> Novità donna </h2>
-              <img src="immagini/felpa-donna.jpg" alt="felpa-donna" title="felpa-donna"
-                    class="immagine-shop">
-              <img src="immagini/maglietta-donna.jpg" alt="maglietta donna" title="maglietta donna" 
-                     class="immagine-shop">
-              <img src="immagini/jeans-donna.jpg" alt="jeans donna" title="jeans donna" 
-                     class="immagine-shop">
-          </section>
-		  
-          <section>
-              <h2 class="titoli_home"> Novità bambino </h2>
-              <img src="immagini/felpa-bambino.jpg" alt="felpa bambino" title="felpa bambino" 
-                    class="immagine-shop">
-              <img src="immagini/maglietta-bambino.jpg" alt="maglietta bambino" title="maglietta bambino" 
-                      class="immagine-shop">
-              <img src="immagini/jeans-bambino.jpg" alt="jeans bambino" title="jeans bambino" 
-                   class="immagine-shop">
-				   
-          </section>
-         
+      <div class="row mb-3">
+        <div class="col-sm-3 fw-bold text-muted">Nome</div>
+        <div class="col-sm-9"><?php echo $_SESSION["nome"]; ?></div>
+      </div>
 
+      <div class="row mb-3">
+        <div class="col-sm-3 fw-bold text-muted">Cognome</div>
+        <div class="col-sm-9"><?php echo $_SESSION["cognome"]; ?></div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-sm-3 fw-bold text-muted">Username</div>
+        <div class="col-sm-9"><?php echo $_SESSION["username"]; ?></div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-sm-3 fw-bold text-muted">Email</div>
+        <div class="col-sm-9"><?php echo $_SESSION["mail"]; ?></div>
+      </div>
+    </div>
+    
+         </div>
+  <div class="card shadow-lg rounded-4 mt-4">
+    <div class="card-body">
+      <h4 class="card-title mb-4">Modifica password</h4>
+         <!-- Sezione per modificare i dati del profilo -->
+          <form class="row g-3 needs-validation" action="modifica_password.php" method="POST" novalidate>
+  
+
+  <!-- Vecchia password -->
+  <div class="col-md-3 position-relative">
+    
+    <label for="vecchia_password" class="form-label">Vecchia password</label>
+    <input type="text" name="vecchia_password" class="form-control" id="vecchia_password" required>
+    <div class="invalid-tooltip">
+      Inserisci la vecchia password.
+    </div>
+  </div>
+
+  <!-- Nuova password -->
+  <div class="col-md-3 position-relative">
+    <label for="nuova_password" class="form-label">Nuova password</label>
+    <input type="text" name="nuova_password" class="form-control" id="nuova_password" required>
+    <div class="invalid-tooltip">
+      Inserisci una nuova password.
+    </div>
+  </div>
+
+  <div class="col-12">
+    <button class="btn btn-primary" type="submit">Modifica dati</button>
+  </div>
+</form> 
+</div></div>
        </article>
        
 
