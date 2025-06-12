@@ -18,7 +18,7 @@
             $login = $_POST["login"];
             $pwd = $_POST["password"];
 
-            echo "Hai inviato una POST! Ciao " . $login;
+            echo "Hai inviato una POST!";
 
             // query con cognome e password da utenti
             $query = "SELECT cognome, password from utenti where username='$login'";
