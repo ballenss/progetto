@@ -1,35 +1,65 @@
-<?php
- $connessione= mysqli_connect($server, $user, $password, $database);
- 
-   die("Errore di connessione".mysqli_connect_error());
-	
-$user = $_POST[ "username" ];
-$pwd = $_POST["password"]; 
-$cogn = $_POST["cognome"];
-$mail = $_POST["mail"];
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+    <title>Registrazione</title>
+</head>
+<body>
+    <h2>Registrati</h2>
+	<br>
 
-if (empty($user)) {echo "campo utente vuoto"; exit();}
-$s= "SELECT cognome FROM utenti WHERE username='$user'";
-$tmp= mysqli_query($conn,$s);
-$n=mysqli_num_rows($tmp);
-if ($n==0)
-{ $s = "INSERT INTO utenti (username, cognome, nome, password, punti)
-VALUES ('$user', '$cogn', '$nome', '$pwd', 0)";
-$tmp = mysqli_query($conn,$s);
-if ($tmp) { echo "dato inserito correttamente";
-if (mail($mail, "negozio di paperopoli", "grazie per la registrazione"))
-echo "Messaggio inviato con successo a" . $mail;
-else
-echo "Errore. Nessun messaggio inviato a ". $mail;
-}
-else {echo "errore inserimento dato".mysqli_error($conn);};
-}
-else {echo "utente esiste gia', cambia username";
-sleep(10);
-}
+    <?php
 
-header("location:registrazione.html") ; 
+// Includo il file per connettere il database
+  require_once 'util/connessione.php';
+  session_start();
+  if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-mysqli_close($conn);
+  // prendo i valori dal form e li mettiamo in variabili
+  $user = $_POST[ "username" ];
+  $pwd = $_POST["password"]; 
+  $cogn = $_POST["cognome"];
+  $mail = $_POST["mail"];
+
+  // controllo se l'utente ha inserito username
+  if (empty($user)) {echo "campo utente vuoto"; exit();}
+
+  // controllo se lo user è presente nel database
+  $s= "SELECT cognome FROM utenti WHERE username='$user'";
+  $ris= mysqli_query($connessione,$s);
+  $n=mysqli_num_rows($ris);
+  // se non c'è
+  if ($n==0){ 
+    // inserisco l'utente nel database
+    $s = "INSERT INTO utenti (username, password, mail, cognome)
+    VALUES ('$user', '$pwd', '$mail', '$cogn')";
+    $tmp = mysqli_query($connessione,$s);
+    if ($tmp) { 
+      echo "dato inserito correttamente";
+      header("refresh:3;url=login.php") ; 
+    }else {
+      echo "errore inserimento dato ".mysqli_error($conn);
+    }
+  }
+  else {
+    echo "utente esiste gia', cambia username";
+  }
+
+
+mysqli_close($connessione);
+}
 
 ?> 
+
+
+<form method="post" action="registrazione.php">
+    <label for="cognome">Cognome <input type="text" name="cognome" placeholder="Cognome" required><br> </br> 
+    <label for="username"> Username <input type="text" name="username" placeholder="Username" required><br></br> 
+   <label for="email"> Email <input type="email" name="mail" placeholder="Email" required><br></br> 
+    <label for="password"> Password <input type="password" name="password" placeholder="Password (min 8 caratteri)" required><br></br> 
+   <INPUT TYPE="submit" VALUE="Registrati">
+    </FORM>
+	</body> 
+	
+</HTML>
+

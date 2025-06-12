@@ -4,11 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
 </head>
 <body>
+
+<header> 
+         <a href="index.html"> 
+          <img src="immagini/logo.svg" alt="logo" title="logo" id="logo" />
+         </a>
+       </header>
     <?php
         // Includiamo il file per connettere il database
-        require_once 'connessione.php';
+        require_once 'util/connessione.php';
         session_start();
         
         // Controllo se è una POST
@@ -42,11 +51,13 @@
         }
     ?>
 
-    <form action="login.php" method="POST">
-    Username:  <input type="text" name="login">
-    Password:  <input type="text" name="password" >
-  <button type="submit">Invia</button>
-</form>
+    <form action="login.php" method="POST" class="border border-success p-2 mb-2">
+    <div class="mb-3 mt-3">Username:  <input type="text" name="login"> <br /> </div>
+    <div class="mb-3">Password:  <input type="text" name="password" ></div>
+    <button type="submit" class="btn btn-primary">Invia</button>
+    </form>
     
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js" integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D" crossorigin="anonymous"></script>
 </body>
 </html>

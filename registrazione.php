@@ -1,6 +1,8 @@
 <?php
+
 // Includo il file per connettere il database
   require_once 'connessione.php';
+  session_start();
 
   // prendo i valori dal form e li mettiamo in variabili
   $user = $_POST[ "username" ];
