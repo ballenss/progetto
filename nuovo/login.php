@@ -57,6 +57,7 @@
         }
     ?>
 
+    <h1>Login</h1>
     <form action="login.php" method="POST" class="border border-success p-2 mb-2">
     <div class="mb-3 mt-3">Username:  <input type="text" name="login"> <br /> </div>
     <div class="mb-3">Password:  <input type="text" name="password" ></div>
