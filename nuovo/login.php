@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
-</head>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="immagini/png" href="immagini/favicon.png">
+        <meta name="keywords" content="moda, uomo, donna, teen, bambino, accessori" />
+        <meta name="description" content="Ecommerce del brand Guess" />
+        <meta name="author" content="Martina Ballesio" />
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+
+    </head>
 <body>
 
 <header> 
@@ -44,6 +48,8 @@
                     echo "Hai sbagliato la password";
                 }else{
                     echo "Ciao " . $riga["cognome"];
+                    $_SESSION["username"]=$login;
+                    $_SESSION["cognome"] = $riga["cognome"];
                 }
             }
         }else{
