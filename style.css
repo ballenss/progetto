@@ -1,0 +1,190 @@
+body {
+  width: 99%;
+  margin: 0 auto;
+  font-family: Times New Roman, arial, helvetica;
+}
+
+header {
+  width: 98%;
+  padding: 15px;
+}
+
+nav {
+  width: 98%;
+  margin: 0 auto;
+  padding: 15px;
+  background-color: #000000;
+  text-align: center;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+article {
+  width: 65%;
+  padding: 15px;
+  text-align: center;
+  float: left;
+}
+
+section {
+  padding: 15px;
+  margin-top: 15px;
+}
+
+footer {
+  width: 98%;
+  padding: 15px;
+  color: #ffffff;
+  text-align: center;
+  clear: left;
+  background-color: #000000;
+  font-size: 14px;
+}
+
+aside {
+  width: 25%;
+  padding: 25px;
+  float: left;
+}
+
+.ul_menu {
+  text-decoration: none;
+}
+
+.li_menu {
+  display: inline;
+  padding: 15px;
+}
+
+#article_home {
+  width: 95%;
+  padding: 15px;
+  text-align: center;
+}
+
+#logo {
+  width: 130px;
+}
+
+.titoli_home {
+  color: #878787;
+}
+
+.immagine-shop {
+  width: 250px;
+  height: 300px;
+}
+
+#immagine-prodotto-singolo {
+  width: 300px;
+  height: 400px;
+  border: 2px solid #cccccc;
+  padding: 25px;
+  margin: 25px;
+}
+
+#prezzo-prodotto {
+  min-width: 150px;
+  max-width: 700px;
+  min-height: 20px;
+  max-height: 40px;
+  width: 200px;
+  height: 30px;
+  border: 5px dotted #cccccc;
+  border-radius: 25px;
+  margin: auto;
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+#aside_prodotto {
+  width: 25%;
+  padding: 25px;
+  float: left;
+  background-color: #cccccc;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.tabella-offerte {
+  border: 3px dotted #cccccc;
+  padding: 25px;
+  margin: auto;
+}
+
+.titolo-tabella-offerte {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 20px;
+}
+
+.td-tabella-offerte {
+  background-color: #cccccc;
+  color: #000000;
+  padding: 20px;
+}
+
+.rect-b {
+  border: 3px dotted red;
+}
+
+[lang="en"] {
+  color: purple;
+  text-align: center;
+}
+
+a:hover {
+  color: white;
+  font-weight: bold;
+}
+
+#identificatore_hover:hover {
+  color: pink;
+  font-style: italic;
+}
+
+/*galleria immagini*/
+.container {
+  display: flex;
+  flex-direction: wrap;
+  background-color: Silver;
+}
+
+.container > div {
+  width: 100%;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+
+.galleria {
+  width: 100%;
+  padding: 2%;
+}
+.left {
+  width: 35%;
+  margin: 1%;
+  float: left;
+}
+
+.left img {
+  border: 1px solid #eeeeee;
+  width: 100%;
+  padding: 1%;
+  min-height: 300px;
+  max-height: 600px;
+}
+
+.right {
+  width: 70%;
+  margin: 1%;
+}
+
+.image img {
+  width: 20%;
+  height: 20%;
+  margin: 1%;
+  float: left;
+}
