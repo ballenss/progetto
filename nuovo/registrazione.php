@@ -8,6 +8,15 @@
     <h1>Registrati</h1>
 	<br>
 
+<form method="post" action="registrazione.php">
+    <label for="cognome">Cognome <input type="text" name="cognome" placeholder="Cognome" required><br> </br> 
+    <label for="nome">Nome <input type="text" name="nome" placeholder="Nome" required><br> </br> 
+    <label for="username"> Username <input type="text" name="username" placeholder="Username" required><br></br> 
+   <label for="email"> Email <input type="email" name="mail" placeholder="Email" required><br></br> 
+    <label for="password"> Password <input type="password" name="password" placeholder="Password (min 8 caratteri)" required><br></br> 
+   <INPUT TYPE="submit" VALUE="Registrati">
+    </FORM>
+    
     <?php
 
 // Includo il file per connettere il database
@@ -24,6 +33,11 @@
 
   // controllo se l'utente ha inserito username
   if (empty($user)) {echo "campo utente vuoto"; exit();}
+  if (empty($pwd)) {echo "campo password vuoto"; exit();}
+  if (strlen($pwd)<8) {echo "La password deve essere lunga almeno 8 caratteri"; exit();}
+  if (empty($cogn)) {echo "campo cognome vuoto"; exit();}
+  if (empty($nome)) {echo "campo nome vuoto"; exit();}
+  if (empty($mail)) {echo "campo mail vuoto"; exit();}
 
   // controllo se lo user è presente nel database
   $s= "SELECT cognome FROM utenti WHERE username='$user'";
@@ -53,14 +67,6 @@ mysqli_close($connessione);
 ?> 
 
 
-<form method="post" action="registrazione.php">
-    <label for="cognome">Cognome <input type="text" name="cognome" placeholder="Cognome" required><br> </br> 
-    <label for="nome">Nome <input type="text" name="nome" placeholder="Nome" required><br> </br> 
-    <label for="username"> Username <input type="text" name="username" placeholder="Username" required><br></br> 
-   <label for="email"> Email <input type="email" name="mail" placeholder="Email" required><br></br> 
-    <label for="password"> Password <input type="password" name="password" placeholder="Password (min 8 caratteri)" required><br></br> 
-   <INPUT TYPE="submit" VALUE="Registrati">
-    </FORM>
 	</body> 
 	
 </HTML>

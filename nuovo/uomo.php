@@ -1,35 +1,19 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 
 <html lang="it">
     
     <head>
-      <meta charset="UTF-8" />
+<!-- includo header -->
+      <?php require 'sezioni/header.php' ?>
       <title> Guess - Shop online</title>
-	    <link rel="icon" type="immagini/png" href="immagini/favicon.png">
-      <meta name="keywords" content="moda, uomo, donna, teen, bambino, accessori" />
-      <meta name="description" content="Ecommerce del brand Guess" />
-      <meta name="author" content="ilaria chiesa" />
-      <link rel="stylesheet" type="text/css" href="style.css"/>
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	</head>
+    </head>
 
     <body>
-       
-       <header> 
-         <a href="index.html"> 
-          <img src="immagini/logo.svg" alt="logo" title="logo" id="logo" >
-         </a>
-       </header>
 
-       <nav>
-         <ul class="ul_menu"> 
-		 <li class="li_menu"> <strong>Uomo</strong> </li>
-		 
-          <li class="li_menu"> <a href="donna.html">Donna</a> </li>
-          <li class="li_menu"> <a href="bambino.html">Bambino</a> </li>
-		  <li class="li_menu"> <a href="offerte.html">Offerte</a> </li>
-         </ul>
-       </nav>
+      <!-- includo navbar -->
+      <?php require 'sezioni/navbar.php' ?>
+   
+ 
 
        <article>
           <section>
@@ -67,18 +51,10 @@
           </ol>
 
        </aside>
+      
+   <!-- includo footer -->
 
-
-
-       <footer>
-           <br/>
-           Guess Shop Online |
-         <a href="faq.html" class="yellow"> Faq </a> |
-      <a href="contatti.html" class="yellow"> Contatti </a>|
-      <a href="galleria.html" class="yellow"> Galleria immagini </a><br />
-           Sito web realizzato da Martina Ballesio
-           <br/>
-       </footer>
+ <?php require 'sezioni/footer.php' ?>
 
     </body>
 

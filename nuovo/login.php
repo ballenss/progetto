@@ -33,7 +33,7 @@
 
             
             // query con cognome e password da utenti
-            $query = "SELECT cognome, nome password from utenti where username='$login'";
+            $query = "SELECT cognome, nome, password from utenti where username='$login'";
             // eseguiamo la query
             $risultato = mysqli_query($connessione, $query);
             // conto quanti risultati ha la query
@@ -64,7 +64,8 @@
     <div class="mb-3">Password:  <input type="text" name="password" ></div>
     <button type="submit" class="btn btn-primary">Invia</button>
     </form>
-    
+    <a href="registrazione.php">Non hai un account? Registrati!</a>
+   
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js" integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D" crossorigin="anonymous"></script>
 </body>
