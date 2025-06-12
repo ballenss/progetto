@@ -2,10 +2,10 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-    <title>Registrazione</title>
+    <title>Registrati</title>
 </head>
 <body>
-    <h2>Registrati</h2>
+    <h1>Registrati</h1>
 	<br>
 
     <?php
@@ -19,6 +19,7 @@
   $user = $_POST[ "username" ];
   $pwd = $_POST["password"]; 
   $cogn = $_POST["cognome"];
+  $nome = $_POST["nome"];
   $mail = $_POST["mail"];
 
   // controllo se l'utente ha inserito username
@@ -31,8 +32,8 @@
   // se non c'è
   if ($n==0){ 
     // inserisco l'utente nel database
-    $s = "INSERT INTO utenti (username, password, mail, cognome)
-    VALUES ('$user', '$pwd', '$mail', '$cogn')";
+    $s = "INSERT INTO utenti (username, password, mail, cognome, nome)
+    VALUES ('$user', '$pwd', '$mail', '$cogn', '$nome')";
     $tmp = mysqli_query($connessione,$s);
     if ($tmp) { 
       echo "dato inserito correttamente";
@@ -54,6 +55,7 @@ mysqli_close($connessione);
 
 <form method="post" action="registrazione.php">
     <label for="cognome">Cognome <input type="text" name="cognome" placeholder="Cognome" required><br> </br> 
+    <label for="nome">Nome <input type="text" name="nome" placeholder="Nome" required><br> </br> 
     <label for="username"> Username <input type="text" name="username" placeholder="Username" required><br></br> 
    <label for="email"> Email <input type="email" name="mail" placeholder="Email" required><br></br> 
     <label for="password"> Password <input type="password" name="password" placeholder="Password (min 8 caratteri)" required><br></br> 

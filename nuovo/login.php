@@ -31,10 +31,9 @@
             $login = $_POST["login"];
             $pwd = $_POST["password"];
 
-            echo "Hai inviato una POST!";
-
+            
             // query con cognome e password da utenti
-            $query = "SELECT cognome, password from utenti where username='$login'";
+            $query = "SELECT cognome, nome password from utenti where username='$login'";
             // eseguiamo la query
             $risultato = mysqli_query($connessione, $query);
             // conto quanti risultati ha la query
@@ -47,13 +46,15 @@
                 if($pwd != $riga["password"]){
                     echo "Hai sbagliato la password";
                 }else{
-                    echo "Ciao " . $riga["cognome"];
+                   
                     $_SESSION["username"]=$login;
                     $_SESSION["cognome"] = $riga["cognome"];
+                    $_SESSION["nome"] = $riga["nome"];
+                    
+
+                    header("Location:index.php") ; 
                 }
             }
-        }else{
-            echo "Hai inviato una GET!";
         }
     ?>
 

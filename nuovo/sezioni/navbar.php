@@ -12,4 +12,6 @@
     <li class="li_menu"> <a href="bambino.html">Bambino</a> </li>
     <li class="li_menu"> <a href="offerte.html">Offerte</a> </li>
     </ul>
+    <span>Ciao <?php echo $_SESSION["nome"] ?></span>
+    <a href="logout.php">Logout</a>
 </nav>
