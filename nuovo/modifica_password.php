@@ -33,14 +33,16 @@
             $query = "SELECT password FROM utenti WHERE username='$username'";
             $risultato = mysqli_query($connessione, $query);
             
+            // se c'è il risultato e esiste l'utente
             if ($risultato && mysqli_num_rows($risultato) > 0) {
                 $riga = mysqli_fetch_assoc($risultato);
+                // se la password vecchia è sbagliata
                 if ($riga['password'] !== $vecchia_password) {
                     echo "La vecchia password non è corretta.";
                     exit();
                 }
                 
-                // Aggiorno la password
+                // Se è corretto aggiorno la password con query update
                 $update_query = "UPDATE utenti SET password='$nuova_password' WHERE username='$username'";
                 if (mysqli_query($connessione, $update_query)) {
                     echo "Password aggiornata con successo.";
