@@ -19,6 +19,11 @@
           <section>
               <a href="aggiungi_servizio.php"><h2 class="titoli_home"> Aggiungi servizio </h2></a>
 
+			</section>         
+            
+            <section>
+              <a href="prodotti.php"><h2 class="titoli_home"> Prodotti </h2></a>
+
 			</section>
 			
           <section>

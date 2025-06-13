@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <?php require '../sezioni/header_admin.php' ?>
+  <?php require 'sezioni/header.php' ?>
   <title>Modifica prodotto</title>
 </head>
 
 <body>
-  <?php require '../sezioni/navbar_admin.php' ?>
+  <?php require 'sezioni/navbar.php' ?>
 
   <article id="article_home">
     <section class="container mt-5">
       <div class="row justify-content-center">
         <div class="col-md-8">
 
-          <h1 class="mb-4 text-center">Elenco prodotti</h1>
+          
 
           <?php
          
      // Includiamo il file per connettere il database
-        require_once '../util/connessione.php';
- 
-  $query = "SELECT * FROM vestiti";
+        require_once 'util/connessione.php';
+        $genere = $_GET["genere"];
+
+        echo "<h1 class='mb-4 text-center'>Elenco prodotti da $genere </h1>";
+  $query = "SELECT * FROM vestiti WHERE genere = '$genere'";
           // Query
           $risultato =mysqli_query($connessione, $query);
 
@@ -39,8 +41,8 @@ while ($riga = mysqli_fetch_assoc($risultato)) {
 
     // Colonna bottoni
     echo "<div class='col-md-4 text-end'>";
-    echo "<a href='modifica_prodotto.php?id=" . $riga["id"] . "' class='btn btn-sm btn-primary me-2'>Modifica</a>";
-    echo "<a href='elimina_prodotto.php?id=" . $riga["id"] . "' class='btn btn-sm btn-danger'>Elimina</a>";
+    echo "<a href='prodotto.php?id=" . $riga["id"] . "' class='btn btn-sm btn-primary me-2'>Visualizza</a>";
+   
     echo "</div>";
 
     echo "</div>";
@@ -60,6 +62,6 @@ while ($riga = mysqli_fetch_assoc($risultato)) {
     </section>
   </article>
 
-  <?php require '../sezioni/footer.php' ?>
+  <?php require 'sezioni/footer.php' ?>
 </body>
 </html>

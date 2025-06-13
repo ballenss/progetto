@@ -25,7 +25,6 @@
      // Includiamo il file per connettere il database
         require_once '../util/connessione.php';
 
-        session_start();
         
         // Controllo se è una POST
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -60,7 +59,10 @@
     </div>
   </div>
 </section>
-   
+           <!-- Pulsante -->
+        <div class="text-center">
+          <a href="prodotti.php"><button class="btn btn-primary" >Prodotti</button></a>
+  </div>
 
        </article>
        

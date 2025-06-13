@@ -44,7 +44,7 @@
         <div class="mb-3 row">
           <label for="descrizione" class="col-sm-4 col-form-label">Descrizione</label>
           <div class="col-sm-8">
-            <textarea class="form-control" name="descrizione" id="descrizione" required></textarea>
+            <textarea class="form-control" name="descrizione" id="descrizione" required rows="10" cols="40"></textarea>
             <div class="invalid-feedback">Inserisci la descrizione.</div>
           </div>
         </div>
