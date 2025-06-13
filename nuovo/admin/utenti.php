@@ -34,11 +34,11 @@
 
                           // Colonna nome prodotto
                           echo "<div class='col-md-8'>";
-                          echo $riga['username'] . " - <strong>" . $riga['mail'] . "</strong> - "  . $riga['Nome'] . " - " .  $riga['cognome'];
+                          echo $riga['username'] . " - <strong>" . $riga['mail'] . "</strong> - "  . $riga['nome'] . " - " .  $riga['cognome'];
                           echo "</div>";
 
                           echo "<div class='col-md-4 text-end'>";
-                          echo "<a href='elimina_utente.php?id=" . $riga["id"] . "' class='btn btn-sm btn-danger'>Elimina</a>";
+                          echo "<a href='elimina_utente.php?username=" . $riga["username"] . "' class='btn btn-sm btn-danger'>Elimina</a>";
                           echo "</div>";
 
                           echo "</div>";

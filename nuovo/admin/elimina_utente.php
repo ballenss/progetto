@@ -25,7 +25,7 @@
      // Includiamo il file per connettere il database
         require_once '../util/connessione.php';
 
-          $query = "DELETE FROM utenti where id = " . $_GET['id'];
+          $query = "DELETE FROM utenti where username = " . $_GET['username'];
           // Query
           $risultato =mysqli_query($connessione, $query);
  

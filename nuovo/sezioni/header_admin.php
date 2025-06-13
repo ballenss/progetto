@@ -11,7 +11,7 @@
 <?php 
 session_start();
 if(!isset($_SESSION["username"])){ //hai gia fatto il login
-    header("Location: login.php");
+    header("Location: ../login.php");
     exit;
 }else if($_SESSION["username"] !== "root"){
     echo "Non sei autorizzato!";
