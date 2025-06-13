@@ -105,7 +105,7 @@
 
    <!-- includo footer -->
 
- <?php require '../sezioni/footer.php' ?>
+ <?php require '../sezioni/footer_admin.php' ?>
 
     </body>
 

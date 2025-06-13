@@ -14,19 +14,31 @@
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li> 
 
-        <li class="nav-item">
-          <a class="nav-link" href="#">Offerte</a>
-          <a href="offerte.html">
-        </li>
-
 <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Genere
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="uomo.php">Uomo</a></li>
-            <li><a class="dropdown-item" href="#">Donna</a></li>
-            <li><a class="dropdown-item" href="#">Bambino</a></li>
+            <?php 
+               // Includiamo il file per connettere il database
+            require_once 'util/connessione.php'; 
+            // estrai dal database tutti i generi usando DISTINCT
+             $query = "SELECT DISTINCT genere FROM vestiti";
+          // Query
+          $risultato =mysqli_query($connessione, $query);
+
+          // Controllo se la query ha restituito risultati
+          $n = mysqli_num_rows($risultato);
+          if ($risultato && $n > 0) {
+            // per ogni genere mostra nella lista
+              while ($riga = mysqli_fetch_assoc($risultato)) {
+                  echo "<li><a class='dropdown-item' href='ricerca.php?genere=".$riga['genere']."'>".$riga['genere']."</a></li>";
+              }
+          }
+
+            
+            ?>
+
           </ul>
         </li>
  

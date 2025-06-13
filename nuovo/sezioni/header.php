@@ -1,5 +1,5 @@
 <meta charset="UTF-8" />
-<link rel="icon" type="immagini/png" href="immagini/favicon.png">
+<link rel="icon" type="immagini/png" href="immagini/favicon.ico">
 <meta name="keywords" content="moda, uomo, donna, teen, bambino, accessori" />
 <meta name="description" content="Ecommerce del brand Guess" />
 <meta name="author" content="Martina Ballesio" />

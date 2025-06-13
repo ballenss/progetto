@@ -1,8 +1,8 @@
  <footer>
     <br/>
     Guess Shop Online |
-    <a href="contatti.html" class="yellow"> Contatti </a> |
-    <a href="admin" class="yellow">Amminstrazione</a><br/>
+    <a href="../contatti.php" class="yellow"> Contatti </a> |
+    <a href="../admin" class="yellow">Amminstrazione</a><br/>
     Sito web realizzato da Martina Ballesio
     <br/>
     <br>

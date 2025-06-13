@@ -5,7 +5,7 @@
     <head>
 <!-- includo header -->
       <?php require '../sezioni/header_admin.php' ?>
-      <title>Aggiungi servizio</title>
+      <title>Elimina Utente</title>
     </head>
 
     <body>
@@ -18,26 +18,26 @@
   <div class="row justify-content-center">
     <div class="col-md-6">
 
-<h1 class="mb-4 text-center">Elimina prodotto</h1>
+<h1 class="mb-4 text-center">Elimina utente</h1>
       
     <?php
 
      // Includiamo il file per connettere il database
         require_once '../util/connessione.php';
 
-          $query = "DELETE FROM vestiti where id = " . $_GET['id'];
+          $query = "DELETE FROM utenti where id = " . $_GET['id'];
           // Query
           $risultato =mysqli_query($connessione, $query);
  
           if ($risultato) {
-              echo "<p>Prodotto eliminato con successo.</p>";
-              echo '<meta http-equiv="refresh" content="2;url=prodotti.php">';
-              
+              echo "<p>Utente eliminato con successo.</p>";
+
+              echo '<meta http-equiv="refresh" content="2;url=utenti.php">';
           } else {
-              echo "<p>Nessun prodotto trovato.</p>";
+              echo "<p>Nessun utente trovato.</p>";
           }
     ?>
-     
+    
 
     </div>
   </div>

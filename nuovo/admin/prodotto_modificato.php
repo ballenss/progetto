@@ -53,6 +53,8 @@
             $tmp = mysqli_query($connessione,$query);
             if ($tmp) { 
               echo "dato aggiornato correttamente";
+
+              echo '<meta http-equiv="refresh" content="2;url=prodotti.php">';
             }else {
               echo "errore inserimento dato ".mysqli_error($conn);
             };
@@ -77,7 +79,7 @@
 
    <!-- includo footer -->
 
- <?php require '../sezioni/footer.php' ?>
+ <?php require '../sezioni/footer_admin.php' ?>
 
     </body>
 

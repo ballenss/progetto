@@ -46,8 +46,11 @@
             $tmp = mysqli_query($connessione,$query);
             if ($tmp) { 
               echo "dato inserito correttamente";
+
+              echo '<meta http-equiv="refresh" content="2;url=aggiungi_servizio.php">';
             }else {
               echo "errore inserimento dato ".mysqli_error($conn);
+ 
             };
         }else{
           echo "Non è una POST";
@@ -69,7 +72,7 @@
 
    <!-- includo footer -->
 
- <?php require '../sezioni/footer.php' ?>
+ <?php require '../sezioni/footer_admin.php' ?>
 
     </body>
 
