@@ -7,18 +7,40 @@
 <link rel="stylesheet" type="text/css" href="css/style.css"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
+  <main class="flex-grow-1 container py-4"> <div> 
     <h1>Registrati</h1>
 	<br>
 
 <form method="post" action="registrazione.php">
-    <label for="cognome">Cognome <input type="text" name="cognome" placeholder="Cognome" required><br> </br> 
-    <label for="nome">Nome <input type="text" name="nome" placeholder="Nome" required><br> </br> 
-    <label for="username"> Username <input type="text" name="username" placeholder="Username" required><br></br> 
-   <label for="email"> Email <input type="email" name="mail" placeholder="Email" required><br></br> 
-    <label for="password"> Password <input type="password" name="password" placeholder="Password (min 8 caratteri)" required><br></br> 
-   <INPUT TYPE="submit" VALUE="Registrati">
-    </FORM>
+  <div class="mb-3">
+    <label for="cognome" class="form-label">Cognome</label>
+    <input type="text" name="cognome" id="cognome" class="form-control" placeholder="Cognome" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="nome" class="form-label">Nome</label>
+    <input type="text" name="nome" id="nome" class="form-control" placeholder="Nome" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="username" class="form-label">Username</label>
+    <input type="text" name="username" id="username" class="form-control" placeholder="Username" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="email" class="form-label">Email</label>
+    <input type="email" name="mail" id="email" class="form-control" placeholder="Email" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="password" class="form-label">Password</label>
+    <input type="password" name="password" id="password" class="form-control" placeholder="Password (min 8 caratteri)" required>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Registrati</button>
+</form>
+
 
     <?php
 
@@ -67,7 +89,8 @@
 mysqli_close($connessione);
 }
 
-?> 
+?> </div>
+</main>
    <!-- includo footer -->
 
  <?php require 'sezioni/footer.php' ?>

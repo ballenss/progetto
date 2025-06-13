@@ -12,7 +12,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
 
     </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
 
 <header> 
          <a href="index.html"> 
@@ -59,6 +59,8 @@
         }
     ?>
 
+  <main class="flex-grow-1 container py-4">
+    <div>
     <h1>Login</h1>
     <form action="login.php" method="POST" class="border border-success p-2 mb-2">
     <div class="mb-3 mt-3">Username:  <input type="text" name="login"> <br /> </div>
@@ -66,7 +68,8 @@
     <button type="submit" class="btn btn-primary">Invia</button>
     </form>
     <a href="registrazione.php">Non hai un account? Registrati!</a>
-   
+    </div>
+    </main>
    <!-- includo footer -->
 
  <?php require 'sezioni/footer.php' ?>
