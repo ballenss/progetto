@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <link rel="icon" type="immagini/png" href="immagini/favicon.png">
+        <link rel="icon" type="immagini/png" href="immagini/favicon.ico">
         <meta name="keywords" content="moda, uomo, donna, teen, bambino, accessori" />
         <meta name="description" content="Ecommerce del brand Guess" />
         <meta name="author" content="Martina Ballesio" />
@@ -67,7 +67,9 @@
     </form>
     <a href="registrazione.php">Non hai un account? Registrati!</a>
    
+   <!-- includo footer -->
 
+ <?php require 'sezioni/footer.php' ?>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js" integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D" crossorigin="anonymous"></script>
 </body>
 </html>

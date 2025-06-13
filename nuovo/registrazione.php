@@ -2,7 +2,10 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
+        <link rel="icon" type="immagini/png" href="immagini/favicon.ico">
     <title>Registrati</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
 </head>
 <body>
     <h1>Registrati</h1>
@@ -16,7 +19,7 @@
     <label for="password"> Password <input type="password" name="password" placeholder="Password (min 8 caratteri)" required><br></br> 
    <INPUT TYPE="submit" VALUE="Registrati">
     </FORM>
-    
+
     <?php
 
 // Includo il file per connettere il database
@@ -65,7 +68,9 @@ mysqli_close($connessione);
 }
 
 ?> 
+   <!-- includo footer -->
 
+ <?php require 'sezioni/footer.php' ?>
 
 	</body> 
 	
