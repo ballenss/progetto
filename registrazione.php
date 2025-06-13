@@ -29,7 +29,7 @@
       header("location:login.html") ; 
     }else {
       echo "errore inserimento dato ".mysqli_error($conn);
-    };
+    }
       
 
   }

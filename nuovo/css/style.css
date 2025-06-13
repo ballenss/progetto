@@ -171,14 +171,12 @@ nav a {
 .container {
   display: flex;
   flex-direction: wrap;
-  background-color: Silver;
 }
 
 .container > div {
   width: 100%;
   text-align: center;
   line-height: 75px;
-  font-size: 30px;
 }
 
 .galleria {
